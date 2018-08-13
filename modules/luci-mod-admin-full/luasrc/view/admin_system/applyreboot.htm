@@ -15,6 +15,7 @@
 
 				img.onload = function() {
 					window.clearInterval(interval);
+					window.location.replace(target);
 					location.href = ('https:' == document.location.protocol ? 'https://' : 'http://') + '<%=addr or luci.http.getenv("SERVER_NAME")%>/';
 				};
 
